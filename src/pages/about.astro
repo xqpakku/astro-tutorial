@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
  const pageTitle = 'About Me';
 
  const identity = {
@@ -13,6 +14,10 @@
     const goal = 3;
 
  const skills = ['HTML', 'CSS', ' Angular', 'C#', 'Astro'];
+
+ const skillColor = 'navy';
+ const fontWeight = 'bold';
+ const textCase = 'uppercase';
 ---
 
 <html lang="en">
@@ -47,7 +52,7 @@
         <p>
             Some skills, that I have are : 
             <ul>
-                {skills.map((skill) => <li>{skill}</li>)}
+                {skills.map((skill) => <li class="skill">{skill}</li>)}
             </ul>
         </p>
 
@@ -65,4 +70,19 @@
         
         
 	</body>
+
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+        .skill{
+            color: var(--skillColor);
+            font-weight: var(--fontWeight);
+            text-transform: var(--textCase);
+        }
+        h1{
+    color: purple;
+   
+}
+    </style>
+
 </html>
+
+
